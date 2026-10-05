@@ -1,0 +1,91 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+#root { max-width: 1180px; margin: 0 auto; padding: 16px; }
+
+header.app-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+header.app-header h1 { font-size: 20px; margin: 0; }
+header.app-header .sub { color: #64748b; font-size: 13px; }
+
+nav.tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+nav.tabs button {
+    border: 1px solid #cbd5e1; background: #fff; border-radius: 8px;
+    padding: 8px 18px; font-size: 14px; cursor: pointer;
+}
+nav.tabs button.active { background: #1d4ed8; border-color: #1d4ed8; color: #fff; font-weight: 600; }
+
+.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+.card h2 { margin: 0 0 12px; font-size: 16px; }
+.card h3 { margin: 16px 0 8px; font-size: 14px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { text-align: left; padding: 7px 8px; border-bottom: 1px solid #e2e8f0; }
+th { color: #64748b; font-weight: 600; white-space: nowrap; }
+tr:last-child td { border-bottom: none; }
+
+button.btn {
+    border: 1px solid #cbd5e1; background: #fff; border-radius: 6px;
+    padding: 4px 10px; font-size: 12px; cursor: pointer; margin-right: 4px;
+}
+button.btn:hover { background: #f1f5f9; }
+button.btn.primary { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+button.btn.primary:hover { background: #1e40af; }
+button.btn.danger { color: #b91c1c; border-color: #fca5a5; }
+button.btn:disabled { opacity: .45; cursor: not-allowed; }
+
+input, select {
+    border: 1px solid #cbd5e1; border-radius: 6px; padding: 6px 8px;
+    font-size: 13px; margin-right: 8px; margin-bottom: 6px; background: #fff;
+}
+label.field { display: inline-block; margin-right: 12px; font-size: 13px; color: #475569; }
+
+.badge { display: inline-block; border-radius: 999px; padding: 1px 9px; font-size: 11px; font-weight: 600; }
+.badge.gray { background: #e2e8f0; color: #475569; }
+.badge.blue { background: #dbeafe; color: #1d4ed8; }
+.badge.green { background: #dcfce7; color: #15803d; }
+.badge.amber { background: #fef3c7; color: #b45309; }
+.badge.red { background: #fee2e2; color: #b91c1c; }
+.badge.purple { background: #ede9fe; color: #6d28d9; }
+
+.restricted-flag { color: #b91c1c; font-weight: 700; font-size: 11px; margin-left: 4px; }
+
+.stats { display: flex; gap: 12px; margin-bottom: 16px; }
+.stat { flex: 1; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 14px; text-align: center; }
+.stat .num { font-size: 30px; font-weight: 700; }
+.stat .label { color: #64748b; font-size: 12px; }
+.stat.warn .num { color: #b45309; }
+.stat.ok .num { color: #15803d; }
+
+.scan-row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; }
+.scan-row input { flex: 1; font-size: 16px; padding: 10px; font-family: ui-monospace, monospace; }
+.scan-result { padding: 10px 14px; border-radius: 8px; font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+.scan-result.accepted { background: #dcfce7; color: #15803d; }
+.scan-result.duplicate { background: #fef3c7; color: #b45309; }
+.scan-result.error { background: #fee2e2; color: #b91c1c; }
+
+.label-preview {
+    border: 2px dashed #94a3b8; border-radius: 10px; padding: 18px; margin-top: 12px;
+    background: #fffbeb; font-family: ui-monospace, monospace; max-width: 420px;
+}
+.label-preview .code { font-size: 26px; font-weight: 800; letter-spacing: 2px; }
+.label-preview .row { font-size: 13px; margin-top: 4px; }
+.label-preview .warn { color: #b91c1c; font-weight: 700; }
+
+.timeline { list-style: none; padding: 0; margin: 0; font-size: 13px; }
+.timeline li { padding: 6px 0 6px 18px; border-left: 2px solid #cbd5e1; position: relative; }
+.timeline li::before {
+    content: ""; position: absolute; left: -5px; top: 12px; width: 8px; height: 8px;
+    border-radius: 50%; background: #1d4ed8;
+}
+.timeline .role { font-weight: 700; margin-right: 6px; }
+.timeline .at { color: #94a3b8; font-size: 11px; margin-left: 8px; }
+.timeline .payload { color: #64748b; font-size: 12px; }
+
+.error-box { background: #fee2e2; color: #b91c1c; border-radius: 8px; padding: 8px 12px; font-size: 13px; margin-bottom: 10px; }
+.muted { color: #94a3b8; font-size: 12px; }
+.section-flex { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.section-flex > * { min-width: 320px; }
